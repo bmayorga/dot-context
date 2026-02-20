@@ -100,4 +100,4 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md). All feedback welcome — open an issue
 
 ## License
 
-MIT · Byron Mayorga · [Intelgi.com](https://intelgi.com)
+MIT · Byron Mayorga · [Intelgi.com](https://www.intelgi.com)

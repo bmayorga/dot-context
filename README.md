@@ -18,6 +18,8 @@ everything from scratch.
 It doubles as **lightweight living documentation**, mostly maintained by AI, that can later be
 promoted to formal docs.
 
+.context is a representation of the current state of the project, not a record of everything that happened during its evolution.
+
 ## Why not just AGENTS.md?
 
 `AGENTS.md` is great for giving AI agents coding instructions (style, commands, rules).

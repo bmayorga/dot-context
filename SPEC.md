@@ -2,8 +2,7 @@
 
 > **How to use this document:** This defines the proposed standard. Read it when adopting or changing the convention. Update requirements and migration guidance together; project-specific implementation details belong in the adopting project's documents.
 
-**Author:** Byron Mayorga  
-**Organization:** [Intelgi.com](https://intelgi.com)  
+**Author:** [Byron Mayorga](https://www.linkedin.com/in/bmayorga/)\
 **Status:** Release candidate — Final review before 1.0.0\
 **License:** MIT  
 **Date:** 2026-10-04

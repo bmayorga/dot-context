@@ -6,7 +6,7 @@
 
 **Version:** 1.0.0-rc.1 — Release candidate for final review before 1.0.0.
 
-Proposed by [Byron Mayorga](https://github.com/bmayorga) · [Intelgi.com](https://intelgi.com)
+Proposed by [Byron Mayorga](https://www.linkedin.com/in/bmayorga/)
 
 ## What is .context/?
 
@@ -174,4 +174,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidance.
 
 ## License
 
-MIT · Byron Mayorga · [Intelgi.com](https://www.intelgi.com)
+MIT · [Byron Mayorga](https://www.linkedin.com/in/bmayorga/)

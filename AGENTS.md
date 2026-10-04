@@ -25,6 +25,7 @@ After a coherent change:
 ## Documentation Guidelines
 
 - Write documentation in English.
+- Link author attribution to https://www.linkedin.com/in/bmayorga/ and omit organization branding.
 - Use uppercase names with a lowercase `.md` extension inside `.context/`.
 - Put visible purpose, reading, and maintenance instructions immediately after each context document's title.
 - Keep the standard simple and independent of tools, products, or technology stacks.

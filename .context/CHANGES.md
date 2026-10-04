@@ -2,6 +2,11 @@
 
 > **How this file works:** This owns durable milestones for the proposal. Read it for historical context. Prepend future dated milestones below these instructions and preserve existing entries. Current state belongs in STATUS.md. The legacy v0.1 session lines below retain their original content and order; the transition entry closes that format.
 
+## 2026-10-04 — Consistent Author Attribution
+
+Removed organization branding from public documentation and the copyright attribution.
+Author mentions now reference the LinkedIn profile, with the convention recorded in AGENTS.md.
+
 ## 2026-10-04 — Self-Contained Document Creation and Task Planning
 
 Defined TASK plans for bounded execution units needing independent context and added a

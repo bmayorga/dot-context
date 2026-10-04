@@ -1,35 +1,35 @@
----
-last_updated: 2026-02-19T22:00:00-05:00
-updated_by: human
-phase: proposal
-blockers: 0
----
+# Project Status
 
-# Status
+> **How this file works:** Read this after README.md for the proposal's current state and priorities. Replace stale information in place. Requirements belong in SPECS.md, scope in SOW.md, design in ARCHITECTURE.md, and durable history in CHANGES.md.
 
-## Current Phase
-Initial proposal — all core files drafted, ready to publish.
+## Current State
 
-## Done
-- [x] SPEC.md v0.1 drafted
-- [x] README with quick start and AGENTS.md integration snippet
-- [x] Templates for all standard files
-- [x] Examples: Laravel SaaS, Next.js App
-- [x] Medium article draft
-- [x] Promotion copy (HN, Reddit, Twitter/X)
+Release candidate 1.0.0-rc.1 defines README.md and STATUS.md as required, visible opening instructions,
+scoped context reading, subject ownership and authority, material-change maintenance,
+optional planning/archive conventions, and curated milestone history with v0.1 migration.
 
-## In Progress
-- [ ] Publish GitHub repository
+Templates cover required documents, recommended references, optional requirements/scope,
+planning documents, optional RBAC guidance, and AGENTS.md. Minimal and growing examples
+demonstrate the workflow without product, stack, or infrastructure details. The growing
+example shows when to read DEVOPS.md, CI_CD.md, and RBAC.md and how their subjects differ.
+Context READMEs explain choosing, adding, registering, maintaining, and retiring references
+and ROADMAP/EPIC/FEATURE/TASK plans. TASK files are optional; routine steps stay in checklists.
 
-## Next Actions
-1. Create GitHub repo (byronmayorga/dot-context or intelgi/dot-context)
-2. Push all files and verify rendering
-3. Post "Show HN" on Hacker News
-4. Post on Reddit r/programming and r/SaaS
-5. Publish Medium article
+Local checks passed for Markdown links and anchors, opening instructions, uppercase context
+filenames, generic example/template content, and diff whitespace.
 
-## Blockers
-None
+## Active Work and Next Actions
 
-## Known Issues
-None
+1. Complete final review of required files and document responsibilities.
+2. Confirm history and migration rules and consistency across templates, examples, and AGENTS.md.
+3. Address review findings, then promote the candidate to 1.0.0 when the review passes.
+4. Resume publication and promotion when authorized.
+
+## Handoffs and Blockers
+
+None.
+
+## Known Risks
+
+Existing adopters need explicit migration: 1.0.0-rc.1 adds a required entry point and changes the
+history convention. Legacy history is preserved rather than rewritten.

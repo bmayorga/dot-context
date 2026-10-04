@@ -1,35 +1,19 @@
----
-last_updated: YYYY-MM-DDTHH:MM:SSZ
-updated_by: human
----
-
 # Architecture
 
-## Stack
+> **How this file works:** This owns implemented structure, component boundaries, dependencies, decisions, and invariants. Read it when design or cross-component behavior matters. Update existing sections after material architectural changes. Code, migrations, tests, and executable configuration take precedence for implementation; plans describe intended design, DEVOPS.md owns operations, and CHANGES.md owns history.
 
-| Layer | Technology | Why |
-|-------|-----------|-----|
-| Frontend | | |
-| Backend | | |
-| Database | | |
-| Hosting | | |
+## Structure and Boundaries
 
-## System Diagram
+<!-- Describe components, responsibilities, and data ownership. -->
 
-```mermaid
-graph TD
-    A[Client] --> B[API]
-    B --> C[Database]
-```
+## Dependencies
 
-## Key Decisions
+<!-- Describe important internal and external dependencies and their constraints. -->
 
-| Decision | Rationale | Date |
-|----------|-----------|------|
-| | | |
+## Decisions and Invariants
 
-## External Dependencies
-- 
+<!-- Record durable rationale and rules the implementation must preserve. -->
 
 ## Known Constraints
-- 
+
+<!-- Describe current constraints; link to plans for proposed changes. -->

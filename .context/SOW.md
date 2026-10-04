@@ -1,39 +1,38 @@
----
-last_updated: 2026-02-19T22:00:00-05:00
-updated_by: human
----
-
 # Statement of Work
 
+> **How this file works:** This owns the approved scope and deliverables for the proposal revision. Read it when deciding what belongs in the change. Update scope after approval; SPECS.md owns acceptance criteria, STATUS.md owns current work, and CHANGES.md owns durable milestones.
+
 ## Objective
-Design and publish a lightweight open standard — `.context/` — for AI-first project documentation
-and context persistence between AI assistant sessions.
+
+Publish a lightweight standard for AI-first project documentation and context continuity.
 
 ## In Scope
-- SPEC.md: Formal (but simple) specification
-- README.md: Quick start and integration guide
-- Templates: One per standard file
-- Examples: Laravel SaaS, Next.js App
-- AGENTS.md integration snippet (ready to copy)
-- Medium article draft
-- Promotional content: HN, Reddit, Twitter/X posts
+
+- Formal 1.0.0-rc.1 specification and v0.1 migration guidance.
+- Public adoption guide and root AGENTS.md integration.
+- Opening instructions in all maintained context documents.
+- Templates for discovery, status, specialized references, scope, requirements, and plans.
+- Self-contained document-creation protocol and optional TASK template.
+- Minimal and growing examples without named products, stacks, or infrastructure details.
+- Optional RBAC reference guidance and template alongside DEVOPS and CI_CD.
+- Alignment of this repository's own context and contribution guidance.
 
 ## Out of Scope
-- CLI tool or linter (future v0.2+)
-- IDE/editor extensions (future)
-- Replacing or forking AGENTS.md
-- Paid tooling of any kind
 
-## Milestones
+- Required toolchains, CLI/linter implementations, or IDE extensions.
+- Replacing AGENTS.md.
+- Copying project-specific source documents or externally maintained plans.
+- Publishing or pushing without user authorization.
 
-| # | Milestone | Status |
-|---|-----------|--------|
-| 1 | Draft SPEC.md v0.1 | ✅ Done |
-| 2 | Templates complete | ✅ Done |
-| 3 | Examples complete | ✅ Done |
-| 4 | GitHub repo published | ⏳ Pending |
-| 5 | Community feedback collected | ⏳ Pending |
-| 6 | SPEC.md v0.2 (incorporating feedback) | ⏳ Pending |
+## Milestones and Deliverables
 
-## Author
-Byron Mayorga · [Intelgi.com](https://intelgi.com)
+| Milestone | State |
+|---|---|
+| v0.1 initial proposal | Complete |
+| Specification, templates, integration, and minimal/growing examples | Complete |
+| 1.0.0-rc.1 version and release status alignment | Complete |
+| Local documentation consistency checks | Complete: links, anchors, opening instructions, naming, and generic content |
+| Final review of responsibilities, history, migration, and document consistency | Pending |
+| Stable 1.0.0 release | Pending final review |
+| Community feedback | Pending |
+| Publication and promotion | Pending |

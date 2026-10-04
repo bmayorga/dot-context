@@ -23,10 +23,9 @@ After a coherent change:
 
 Do not rewrite externally maintained documents outside their declared synchronization process.
 Report conflicts between implementation and approved business definitions or intended scope.
-When additional context is needed, follow README.md's document-selection and creation protocol.
-Create only the smallest useful reference or plan within authorized scope and register it there.
 
 ## Project Rules
 
-<!-- Add actual coding conventions, runnable validation commands, and delivery rules.
-     Do not treat this template as permission to commit, push, or deploy. -->
+This is a hypothetical documentation example. Keep its documents and links coherent.
+Use actual implementation evidence when adapting it to a project; these files describe
+an illustrative workflow and do not supply application code.

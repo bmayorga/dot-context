@@ -1,44 +1,34 @@
----
-last_updated: 2026-02-19T22:00:00-05:00
-updated_by: human
----
-
 # Architecture
+
+> **How this file works:** This owns the proposal repository's structure and design rationale. Read it when changing document responsibilities or integration. Update after material design changes; SPEC.md governs the proposed standard and actual repository files establish what is present. SPECS.md owns goals, SOW.md owns scope, and CHANGES.md owns milestones.
 
 ## Design Principles
 
-1. **Plain text first** — Markdown readable by humans and AI without preprocessing
-2. **Additive** — adding `.context/` changes nothing else in the project
-3. **Composable** — works alongside AGENTS.md and README.md, not instead of them
-4. **AI-writable** — agents can update files without human approval of format
+- Plain Markdown: human-readable without preprocessing or mandatory tooling.
+- Scoped reading: discovery and status first, then relevant knowledge.
+- One owner per subject: link instead of copying facts.
+- Current references, active plans, and historical evidence have distinct roles.
+- Visible instructions make each context document maintainable.
+- Project-neutral templates and examples avoid source-project details.
 
-## File Roles
+## Structure and Boundaries
 
-```
-.context/
-├── STATUS.md       ← Most volatile; updated every AI session
-├── SPECS.md        ← Stable; updated when requirements change
-├── SOW.md          ← Very stable; updated at major milestones
-├── ARCHITECTURE.md ← Stable; updated on architectural decisions
-└── CHANGES.md      ← Append-only; never edited, only appended
-```
+SPEC.md defines the standard. The public README explains adoption. Templates provide
+copyable starting points. Minimal and growing examples demonstrate how the document set scales.
+AGENTS.md routes contributors through this repository's context protocol.
 
-## Integration Design
-
-```
-AGENTS.md
-  └── instructs AI to read ──→ .context/*.md
-                                  └── AI updates after each session
-```
-
-AGENTS.md contains the instructions. `.context/` holds the knowledge. They are separate concerns.
-
-## Key Decisions
+## Decisions
 
 | Decision | Rationale |
-|----------|-----------|
-| Markdown only (no JSON body) | Readable without tools; AI handles it natively |
-| Optional YAML frontmatter | Machine-readable when needed, optional when not |
-| Uppercase filenames (STATUS.md) | Consistent with README.md, AGENTS.md convention |
-| `.context/` dotfolder | Hidden by default, clear purpose; follows .github/ pattern |
-| MIT license | Maximum adoption; no friction for any use case |
+|---|---|
+| README.md and STATUS.md required | Establish discovery and continuity without six mandatory files |
+| Specialized references recommended when relevant | Avoid empty documents and duplicate subjects |
+| RBAC.md optional with a dedicated template | Make access-rule ownership discoverable without requiring it for every project |
+| SPECS.md and SOW.md retained | Preserve useful requirements and scope ownership |
+| Optional planning documents and archive | Keep detailed work out of concise current state |
+| Self-contained README extension protocol | Let assistants add the smallest useful reference or plan within authorized scope |
+| TASK plans only for independent context or lifecycle | Avoid creating one file per routine action |
+| Curated milestone history | Keep durable outcomes discoverable without session noise |
+| Preserve legacy entries on migration | Retain evidence without rewriting history |
+| Visible instructions after the title | State purpose, authority, and maintenance where readers start |
+| Uppercase names and optional YAML | Consistent naming without mandatory metadata |

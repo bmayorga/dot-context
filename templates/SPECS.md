@@ -1,31 +1,19 @@
----
-last_updated: YYYY-MM-DDTHH:MM:SSZ
-updated_by: human
----
+# Requirements and Acceptance Criteria
 
-# Specs
+> **How this file works:** This owns approved requirements and acceptance criteria. Read it when expected behavior matters. Update requirements after an approved decision and keep unresolved questions explicit. This describes intended behavior; code and tests establish implementation. SOW.md owns scope commitments, active plans own task tracking, and STATUS.md owns present state.
 
 ## Objective
-<!-- One sentence: what does this project do and for whom? -->
 
-## Success Criteria
-- [ ] 
-- [ ] 
+<!-- State the outcome and intended users. -->
 
 ## Requirements
 
-### Must Have
-- 
-
-### Should Have
-- 
-
-### Won't Have (this version)
-- 
+<!-- Separate required, desirable, and excluded behavior. -->
 
 ## Acceptance Criteria
 
-### Feature 1
-- Given ...
-- When ...
-- Then ...
+<!-- State observable outcomes that can be verified. -->
+
+## Open Decisions
+
+None.

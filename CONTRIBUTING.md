@@ -1,32 +1,27 @@
-# Contributing to .context/ Standard
+# Contributing to .context/
 
-Thank you for your interest. This is a community-driven proposal and all feedback is welcome.
+> **How to use this document:** Read this before proposing a contribution and follow AGENTS.md for repository work. Keep this guidance aligned with the specification and contribution scope.
 
 ## Ways to Contribute
 
-- **Open an issue** to propose a new standard file, discuss naming conventions, or share your
-  real-world usage of `.context/`
-- **Submit a PR** with template improvements, new stack examples, or documentation fixes
-- **Share your setup** — real-world `.context/` examples are the most valuable contribution
+- Propose clearer discovery, ownership, maintenance, or migration rules.
+- Improve copyable templates and their opening instructions.
+- Report inconsistent document responsibilities or broken links.
+- Improve the minimal and growing examples without introducing a named product, stack, or environment.
 
 ## Guidelines
 
-- Keep it simple. Proposals that add complexity need strong justification.
-- Tools and integrations are welcome as separate repos; keep the core spec lean.
-- No toolchain required — plain Markdown only.
+Keep the core lean: plain Markdown, no required toolchain, and no tool-specific integrations.
+Every maintained context document must open with visible purpose and maintenance instructions.
+Use uppercase context filenames. Preserve historical entries and distinguish plans from
+implemented behavior.
 
-## Adding an Example
+For standard changes, update SPEC.md, public guidance, templates, examples, and repository
+context together. Validate local links and check for obsolete instructions.
 
-1. Fork the repository
-2. Create `examples/your-stack/` with a realistic project structure
-3. Add `.context/` with filled-in templates (anonymize real data as needed)
-4. Add `AGENTS.md` showing the integration snippet
-5. Open a PR with a brief description of the stack and use case
+## Examples
 
-## Questions
-
-Open an issue. No formalities required.
-
----
-
-Byron Mayorga · [Intelgi.com](https://intelgi.com)
+Examples must be project-neutral. Do not copy source-project names, domain models,
+infrastructure, credentials, or externally maintained plans. Demonstrate the documentation
+workflow with concise, internally consistent content. Commands, if present, must be runnable
+for the environment described.

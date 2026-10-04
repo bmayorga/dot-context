@@ -1,104 +1,176 @@
 # .context/ Standard
 
+> **How to use this repository:** Start here for adoption, read [SPEC.md](SPEC.md) for the rules, and copy only the templates you need. Contributors must read [AGENTS.md](AGENTS.md) before editing. Keep the specification, templates, examples, and repository context consistent.
+
 **A lightweight, AI-first project context convention.**
 
-Proposed by [Byron Mayorga](https://github.com/byronmayorga) · [Intelgi.com](https://intelgi.com)
+**Version:** 1.0.0-rc.1 — Release candidate for final review before 1.0.0.
 
----
+Proposed by [Byron Mayorga](https://github.com/bmayorga) · [Intelgi.com](https://intelgi.com)
 
-## What is `.context/`?
+## What is .context/?
 
-`.context/` is a folder at the root of any project. It holds a small set of Markdown files
-describing your project's current state, scope, requirements, and architecture.
+A small directory of plain Markdown that preserves project knowledge between AI sessions.
+It describes current state, scope, design, and operational knowledge without requiring tooling.
+Current references represent the present; plans describe intended work; curated history
+records lasting milestones.
 
-Its primary purpose is **context persistence between AI assistant sessions** — so any AI agent
-(Cursor, Claude, Copilot, Codex, etc.) can resume work on your project without you re-explaining
-everything from scratch.
+AGENTS.md holds agent instructions. .context/README.md defines how to discover and maintain
+project knowledge. They work together.
 
-It doubles as **lightweight living documentation**, mostly maintained by AI, that can later be
-promoted to formal docs.
+## Structure
 
-.context is a representation of the current state of the project, not a record of everything that happened during its evolution.
-
-## Why not just AGENTS.md?
-
-`AGENTS.md` is great for giving AI agents coding instructions (style, commands, rules).
-`.context/` is complementary: it holds *project knowledge* — what you're building, current status,
-decisions made. They work best together.
-
-See [Integration with AGENTS.md](#integration-with-agentsmd).
-
-## File Structure
-
-```
-your-project/
-├── AGENTS.md           ← AI coding instructions → references .context/
+```text
+project/
+├── AGENTS.md
 └── .context/
-    ├── STATUS.md       ← current phase, blockers, next actions  [REQUIRED]
-    ├── SPECS.md        ← requirements and acceptance criteria
-    ├── SOW.md          ← scope, milestones, deliverables
-    ├── ARCHITECTURE.md ← tech stack, diagrams, key decisions
-    └── CHANGES.md      ← append-only log (AI-updated)
+    ├── README.md                 # Required: discovery and maintenance protocol
+    ├── STATUS.md                 # Required: concise present-state snapshot
+    ├── ARCHITECTURE.md           # Recommended when design needs documentation
+    ├── DEVOPS.md                 # Recommended when operations need documentation
+    ├── CI_CD.md                  # Recommended when delivery needs documentation
+    ├── RBAC.md                   # Optional when access rules need a dedicated reference
+    ├── CHANGES.md                # Recommended for durable milestone history
+    ├── SPECS.md                  # Optional requirements and acceptance criteria
+    ├── SOW.md                    # Optional scope and deliverables
+    ├── FEATURE-CAPABILITY.md      # Optional bounded plan
+    ├── TASK-WORK.md               # Optional independently resumable execution unit
+    └── archive/                  # Optional inactive plans
 ```
 
-Only `STATUS.md` is required. All others are optional but recommended for non-trivial projects.
+Start with README.md and STATUS.md. Add other documents only when they provide useful knowledge.
+Optional ROADMAP-* and EPIC-* plans support broader work without requiring a planning hierarchy.
 
 ## Quick Start
 
+From a local copy of this repository, use its absolute path:
+
 ```bash
-mkdir .context
-curl -o .context/STATUS.md https://raw.githubusercontent.com/byronmayorga/dot-context/main/templates/STATUS.md
+# Run from the root of the adopting project.
+mkdir -p .context
+cp /path/to/dot-context/templates/README.md .context/README.md
+cp /path/to/dot-context/templates/STATUS.md .context/STATUS.md
 ```
 
-Or copy the [templates](./templates/) manually and fill them in.
+Fill in current state, remove optional index rows for documents you do not use, and copy
+the integration block below into your existing AGENTS.md. Add relevant
+[templates](templates/) as needed. Each starts with visible purpose and maintenance
+instructions; retain and adapt those instructions.
 
 ## Integration with AGENTS.md
 
-Add this block to your existing `AGENTS.md`:
+Place this block near the top of AGENTS.md, before project-specific coding rules:
 
 ```markdown
 ## Project Context
 
-This project uses the `.context/` standard. Before making any changes:
+Before every task:
+1. Read .context/README.md and follow its discovery, authority, and maintenance rules.
+2. Read .context/STATUS.md.
+3. Read only the references and active plans relevant to the task.
+4. Inspect implementation evidence before claiming implemented behavior.
 
-1. Read `.context/STATUS.md` — current state and blockers
-2. Read `.context/SPECS.md` — requirements and acceptance criteria
-3. Read `.context/SOW.md` — scope and what is out of scope
-4. Read `.context/ARCHITECTURE.md` — tech stack and key decisions
+After a coherent change:
+- Update affected documents only when their underlying facts materially changed.
+- Replace stale current-state text and reconcile relevant active plans.
+- If CHANGES.md exists, prepend a durable milestone and preserve existing entries.
+- Validate links and repair references to renamed, archived, or removed documents.
 
-After completing any significant task:
-- Update `.context/STATUS.md` (mark done items, update next actions, note new blockers)
-- Append one line to `.context/CHANGES.md`: `YYYY-MM-DD | [tool-name] | description`
+Report discrepancies between implementation and approved scope or business definitions.
+Follow existing project rules for commits, pushes, and deployment.
 ```
 
-## Standard Files
+A complete [AGENTS.md template](templates/AGENTS.md) is also available.
 
-| File | Required | Purpose | Updated by |
-|------|----------|---------|------------|
-| `STATUS.md` | ✅ | Current phase, blockers, next steps | AI after each session |
-| `SPECS.md` | Recommended | Requirements, acceptance criteria | Human + AI |
-| `SOW.md` | Recommended | Scope, milestones, out-of-scope | Human |
-| `ARCHITECTURE.md` | Optional | Stack, diagrams, decisions | Human + AI |
-| `CHANGES.md` | Optional | Append-only session log | AI (append only) |
+## Document Ownership
 
-You may add custom files following the same convention: `DEPLOY.md`, `METRICS.md`, `SECURITY.md`, etc.
+| Document | Owns |
+|---|---|
+| README.md | Discovery, authority, and maintenance |
+| STATUS.md | Present state, active work, handoffs, blockers, risks, next actions |
+| ARCHITECTURE.md | Implemented structure, boundaries, decisions, and invariants |
+| [DEVOPS.md](templates/DEVOPS.md) | Local setup, environments, services, and runtime operations |
+| [CI_CD.md](templates/CI_CD.md) | Validation, pipelines, artifacts, and delivery |
+| [RBAC.md](templates/RBAC.md) | Roles, permissions, resource scope, and authorization boundaries |
+| CHANGES.md | Durable milestones, newest first |
+| SPECS.md / SOW.md | Approved requirements / scope |
+| ROADMAP-* / EPIC-* / FEATURE-* / TASK-* | Active plans at the smallest useful scale |
 
-## AI Session Workflow
+Code and executable configuration establish implemented behavior. Approved requirements,
+scope, and business definitions establish intent. Report conflicts instead of silently
+changing approved definitions to match code. Historical records do not govern current work.
 
-**Start of session:**
-> "Read AGENTS.md and all files in .context/. Summarize the current status and tell me the next priorities."
+DEVOPS.md and CI_CD.md are recommended when operational or delivery knowledge needs to be
+documented. RBAC.md is optional and useful when access rules need a dedicated reference.
+Read them for runtime work, delivery work, and authorization work respectively. Add only
+the documents your project needs and list each in .context/README.md so agents can discover it.
+The [specification](SPEC.md#optional-specialized-references) explains specialized references.
 
-**End of session:**
-> "Update STATUS.md with what we accomplished. Append a summary line to CHANGES.md with today's date."
+## Choosing and Adding Files
 
-## Examples
+The copied [.context/README.md template](templates/README.md) contains the complete selection,
+creation, registration, and lifecycle protocol so an assistant can add documents later.
 
-- [Laravel SaaS](./examples/laravel-saas/)
-- [Next.js App](./examples/nextjs-app/)
+| Type | Use for |
+|---|---|
+| ROADMAP-* | A broad initiative or release with sequencing across capabilities |
+| EPIC-* | A shared outcome spanning coordinated features |
+| FEATURE-* | A bounded capability with accepted scope and persistent checkpoints |
+| TASK-* | A fix, investigation, refactor, or execution step needing independent handoff or validation |
+| Additional reference | Durable knowledge needing a separate subject owner |
 
-## Contributing
+Choose the smallest useful owner. Tasks and features may stand alone; no parent hierarchy
+is required. Keep routine steps in an existing checklist rather than creating one file per action.
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md). All feedback welcome — open an issue or PR.
+Before creating a file, search existing context and tracking. Update an existing owner if
+it already covers the subject. Otherwise use an uppercase descriptive filename, visible
+opening instructions, ownership and authority, and explicit lifecycle. Plans also need
+objective, accepted scope, checkpoints, dependencies, decisions, validation, and completion criteria.
+Documenting proposed scope does not approve it.
+
+Index the new file in .context/README.md with reading and maintenance rules, route active
+work from STATUS.md, and link related plans without duplicating their contents. After
+verified progress, reconcile the plan. When inactive, promote durable conclusions to
+references, archive or remove the plan, and repair active links in the same change.
+
+Copyable plans: [ROADMAP](templates/ROADMAP-INITIATIVE.md),
+[EPIC](templates/EPIC-CAPABILITY.md), [FEATURE](templates/FEATURE-CAPABILITY.md),
+and [TASK](templates/TASK-WORK.md).
+
+## Task Workflow
+
+At the start, read AGENTS.md, .context/README.md, STATUS.md, and relevant documents.
+At the end, update only materially changed facts. Keep detailed task lists in plans and
+history in CHANGES.md. Archive inactive plans and repair active links in the same change.
+Do not create a context document when another document already owns its subject.
+
+Each maintained context document must have visible instructions immediately after its title
+explaining its purpose, when to read it, and how to maintain it. YAML metadata is optional.
+
+## Migrating from v0.1
+
+1.0.0-rc.1 adds README.md, opening instructions, scoped reading, and curated history.
+Keep existing SPECS.md and SOW.md when useful. Preserve legacy CHANGES.md entries and their
+order; prepend future dated milestones above them and document the transition.
+See [the migration checklist](SPEC.md#migration-from-v01).
+
+## Release Readiness
+
+The first release candidate has the complete proposed workflow. Before 1.0.0, confirm
+required files and responsibilities, history and migration rules, and consistency across
+the specification, templates, examples, and AGENTS.md integration.
+
+## Examples and Contributions
+
+- [Minimal project](examples/minimal/README.md): AGENTS.md, context discovery, and concise status.
+- [Growing project](examples/growing/README.md): architecture, DEVOPS, CI_CD, RBAC, active
+  planning, and milestone history, with clear reading triggers and ownership.
+
+Both are hypothetical documentation examples without named products, technology stacks,
+or deployment infrastructure. Choose the smallest useful set; the growing example does
+not make its optional documents mandatory.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidance.
 
 ## License
 

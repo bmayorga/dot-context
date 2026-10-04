@@ -1,30 +1,23 @@
----
-last_updated: YYYY-MM-DDTHH:MM:SSZ
-updated_by: human
----
-
 # Statement of Work
 
+> **How this file works:** This owns approved scope, exclusions, milestones, and deliverables. Read it when scope boundaries matter. Update commitments only after approval from the responsible owner. SPECS.md owns detailed requirements, active plans own implementation checkpoints, and STATUS.md owns current state. Scope does not prove implementation.
+
 ## Objective
-<!-- What is being built and why -->
+
+<!-- State the agreed outcome. -->
 
 ## In Scope
-- 
+
+<!-- State approved commitments. -->
 
 ## Out of Scope
-- 
 
-## Milestones
+<!-- State explicit exclusions. -->
 
-| # | Milestone | Target Date | Status |
-|---|-----------|-------------|--------|
-| 1 | | | ⏳ Pending |
+## Milestones and Deliverables
 
-## Deliverables
-- 
+<!-- Define observable completion outcomes and dependencies. -->
 
-## Team
+## Ownership and Open Decisions
 
-| Role | Name |
-|------|------|
-| | |
+<!-- Identify who approves scope changes and list unresolved decisions. -->

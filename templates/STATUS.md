@@ -1,28 +1,19 @@
----
-last_updated: YYYY-MM-DDTHH:MM:SSZ
-updated_by: human
-phase: planning
-blockers: 0
----
+# Project Status
 
-# Status
+> **How this file works:** Read this after README.md for the current state, active work, handoffs, and risks. Replace stale information in place and keep it short. Detailed tasks belong in active plans, implemented design in ARCHITECTURE.md, operations in DEVOPS.md, and completed milestones in CHANGES.md. This summary does not override those sources.
 
-## Current Phase
-<!-- Brief description of where the project is right now -->
+## Current State
 
-## Done
-<!-- - [x] Completed items -->
+<!-- Brief, verified present-state summary. -->
 
-## In Progress
-<!-- - [ ] Active work items -->
+## Active Work and Next Actions
 
-## Next Actions
-1. 
-2. 
-3. 
+<!-- Link to relevant plans and state the immediate priorities. -->
 
-## Blockers
-- None
+## Handoffs and Blockers
 
-## Known Issues
-- None
+None.
+
+## Known Risks
+
+None.

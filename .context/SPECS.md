@@ -1,35 +1,41 @@
----
-last_updated: 2026-02-19T22:00:00-05:00
-updated_by: human
----
+# Requirements and Acceptance Criteria
 
-# Specs
+> **How this file works:** This owns the proposal's goals, requirements, and acceptance criteria. Read it before changing the standard. Update after an approved requirement change; SPEC.md defines the resulting proposal, SOW.md owns scope, and STATUS.md owns current state.
 
 ## Objective
-Propose `.context/` as an open, practical standard for AI session context persistence and
-lightweight project documentation.
 
-## Success Criteria
-- [ ] GitHub repo with 100+ stars in first month
-- [ ] At least 3 real-world examples contributed by the community
-- [ ] Referenced or linked from at least one AI coding tool's documentation
-- [ ] Featured in a developer community (HN, Reddit, Dev.to)
+Propose an open, lightweight Markdown convention for project knowledge and AI session continuity.
 
 ## Requirements
 
-### Must Have
-- Plain Markdown — no toolchain required
-- Works with any AI assistant
-- Integrates with AGENTS.md via a simple snippet
-- Templates for all standard files
-- MIT license
+- Plain Markdown with no required toolchain.
+- Independent of AI tool, product, technology stack, and hosting provider.
+- Root AGENTS.md integration and context discovery through README.md.
+- README.md and STATUS.md required; other documents added when useful.
+- Visible purpose, reading, and maintenance instructions at the top of maintained context documents.
+- Explicit authority, ownership, scoped reading, and material-change maintenance.
+- Concise current state, optional active plans, and preserved milestone history.
+- Self-contained README rules for choosing, creating, registering, and retiring additional files.
+- Optional TASK-* plans for independently resumable execution units; routine steps stay in checklists.
+- Optional SPECS.md/SOW.md and optional YAML metadata.
+- Project-neutral templates and examples.
+- Minimal and growing examples demonstrate optional DEVOPS.md, CI_CD.md, and RBAC.md ownership.
+- MIT license.
 
-### Should Have
-- Real-world examples for common stacks (Laravel, Next.js)
-- YAML frontmatter for machine-readable metadata
-- CHANGES.md append-only convention
+## Acceptance Criteria
 
-### Won't Have (v0.1)
-- JSON/YAML-only format (defeats readability purpose)
-- Tool-specific integrations in core spec
-- Required CLI or linter
+- [x] Specification, public README, and AGENTS.md describe the same workflow.
+- [x] Templates cover required, recommended, and optional document types.
+- [x] Minimal and growing examples demonstrate routing, planning, current state, and history.
+- [x] Optional RBAC guidance and template complement recommended operations and delivery references.
+- [x] README selection and lifecycle rules cover ROADMAP, EPIC, FEATURE, TASK, and specialized references.
+- [x] Migration guidance preserves v0.1 history and useful scope/requirements files.
+- [x] Maintained context documents start with visible instructions after their titles.
+- [x] Version and release status aligned as 1.0.0-rc.1.
+- [ ] Final review confirms required files and document responsibilities.
+- [ ] Final review confirms history, migration, and consistency before 1.0.0.
+- [ ] Community feedback collected on the release candidate.
+
+## Exclusions
+
+Required CLI tools, linters, editor extensions, and tool-specific integrations.

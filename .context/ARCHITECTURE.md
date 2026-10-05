@@ -31,4 +31,5 @@ AGENTS.md routes contributors through this repository's context protocol.
 | Curated milestone history | Keep durable outcomes discoverable without session noise |
 | Preserve legacy entries on migration | Retain evidence without rewriting history |
 | Visible instructions after the title | State purpose, authority, and maintenance where readers start |
+| Configurable design checklist in AGENTS.md | Enable useful defaults while preserving developer choices and adopted architecture |
 | Uppercase names and optional YAML | Consistent naming without mandatory metadata |

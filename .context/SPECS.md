@@ -18,6 +18,8 @@ Propose an open, lightweight Markdown convention for project knowledge and AI se
 - Self-contained README rules for choosing, creating, registering, and retiring additional files.
 - Optional TASK-* plans for independently resumable execution units; routine steps stay in checklists.
 - Optional SPECS.md/SOW.md and optional YAML metadata.
+- A developer-configurable design checklist in AGENTS.md, enabled by default in the template.
+- Preserve local selections and separate recommendations from implemented architecture.
 - Project-neutral templates and examples.
 - Minimal and growing examples demonstrate optional DEVOPS.md, CI_CD.md, and RBAC.md ownership.
 - MIT license.
@@ -32,6 +34,7 @@ Propose an open, lightweight Markdown convention for project knowledge and AI se
 - [x] Migration guidance preserves v0.1 history and useful scope/requirements files.
 - [x] Maintained context documents start with visible instructions after their titles.
 - [x] Version and release status aligned as 1.0.0-rc.1.
+- [x] Template defaults, checkbox semantics, installation guidance, and configurable examples are aligned.
 - [ ] Final review confirms required files and document responsibilities.
 - [ ] Final review confirms history, migration, and consistency before 1.0.0.
 - [ ] Community feedback collected on the release candidate.

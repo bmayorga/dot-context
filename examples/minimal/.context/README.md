@@ -7,6 +7,15 @@
 [STATUS.md](STATUS.md) owns present state, blockers, and immediate priorities.
 No additional references or plans are currently needed.
 
+## Design Preferences
+
+Read the Design Recommendations checklist in AGENTS.md when present. Checked items are
+enabled preferences for relevant work; unchecked items are disabled preferences. Preserve
+developer selections and change them only when instructed by the developer. Approved
+decisions and more specific project rules take precedence. Record adopted architecture
+in ARCHITECTURE.md when it exists; do not duplicate the checklist or infer implementation
+from its selections. No extra context file is needed for these preferences.
+
 ## Authority
 
 Inspect implementation evidence before claiming behavior. Approved requirements govern

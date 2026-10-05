@@ -10,6 +10,7 @@ Publish a lightweight standard for AI-first project documentation and context co
 
 - Formal 1.0.0-rc.1 specification and v0.1 migration guidance.
 - Public adoption guide and root AGENTS.md integration.
+- Default-enabled design recommendations configurable in AGENTS.md without adding context files.
 - Opening instructions in all maintained context documents.
 - Templates for discovery, status, specialized references, scope, requirements, and plans.
 - Self-contained document-creation protocol and optional TASK template.

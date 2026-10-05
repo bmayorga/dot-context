@@ -15,6 +15,9 @@ example shows when to read DEVOPS.md, CI_CD.md, and RBAC.md and how their subjec
 Context READMEs explain choosing, adding, registering, maintaining, and retiring references
 and ROADMAP/EPIC/FEATURE/TASK plans. TASK files are optional; routine steps stay in checklists.
 Author attribution uses the LinkedIn profile consistently; organization branding has been removed.
+AGENTS.md now supports a default-enabled design checklist for Clean Architecture, SOLID,
+design patterns, KISS, YAGNI, and DRY. Developers can disable preferences; assistants preserve
+their selections. Examples demonstrate defaults and one disabled preference without adding files.
 
 Local checks passed for Markdown links and anchors, opening instructions, uppercase context
 filenames, generic example/template content, and diff whitespace.

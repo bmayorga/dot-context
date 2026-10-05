@@ -80,7 +80,32 @@ Report discrepancies between implementation and approved scope or business defin
 Follow existing project rules for commits, pushes, and deployment.
 ```
 
-A complete [AGENTS.md template](templates/AGENTS.md) is also available.
+A complete [AGENTS.md template](templates/AGENTS.md) is also available. For a new AGENTS.md,
+copy that template and customize its project rules. When AGENTS.md already exists, merge
+the context block above and the design checklist without replacing existing rules
+or developer selections.
+
+### Configure Design Recommendations
+
+The template enables Clean Architecture, SOLID, design patterns, KISS, YAGNI, and DRY by
+default in its **Design Recommendations** checklist. Keep the checklist in AGENTS.md;
+ARCHITECTURE.md continues to own adopted decisions and implemented structure.
+
+- `[x]` enables a recommendation for relevant work.
+- `[ ]` disables the preference; it does not require doing the opposite.
+- Developers may disable individual items. Assistants preserve selections and change them
+  only when instructed by the developer, including during template updates.
+- Approved project decisions and more specific rules take precedence. Enabled items do
+  not require new layers, interfaces, folder layouts, or a pattern for every change.
+
+For example, a developer can change the Design patterns checkbox from `[x]` to `[ ]`.
+The assistant then follows existing project decisions without treating that recommendation
+as an enabled preference. All defaults are visible in the
+[copyable checklist](templates/AGENTS.md#design-recommendations).
+
+When merging into an existing AGENTS.md, copy the entire Design Recommendations section,
+including its interpretation rules. Review conflicts with local rules and preserve any
+existing checklist choices; do not reset them to the template defaults.
 
 ## Document Ownership
 

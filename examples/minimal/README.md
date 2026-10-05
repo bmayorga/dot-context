@@ -11,3 +11,6 @@
 No specialized reference or plan is needed while the current facts fit in a short status.
 Add one only when its subject needs a separate owner. The
 [growing example](../growing/README.md) shows that next step.
+
+AGENTS.md includes all six design recommendations enabled as template defaults; the
+developer may disable individual preferences without adding a context document.

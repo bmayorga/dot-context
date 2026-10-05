@@ -2,6 +2,13 @@
 
 > **How this file works:** This owns durable milestones for the proposal. Read it for historical context. Prepend future dated milestones below these instructions and preserve existing entries. Current state belongs in STATUS.md. The legacy v0.1 session lines below retain their original content and order; the transition entry closes that format.
 
+## 2026-10-04 — Configurable Design Recommendations
+
+Added a default-enabled design checklist to the AGENTS template and documented checkbox
+semantics, developer ownership, scope boundaries, and preservation during template updates.
+Examples demonstrate default and customized selections; ARCHITECTURE remains the owner
+of adopted decisions and implemented structure, with no additional context document required.
+
 ## 2026-10-04 — Consistent Author Attribution
 
 Removed organization branding from public documentation and the copyright attribution.

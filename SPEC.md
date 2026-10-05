@@ -154,6 +154,23 @@ documents in place, reconcile plans and status, record a milestone only when dur
 validate local links and references to retired documents. Documentation need not change
 after every edit or session. This protocol does not authorize commits, pushes, or deployment.
 
+## Configurable Design Recommendations
+
+The AGENTS.md template includes a developer-configurable checklist with Clean Architecture,
+SOLID, design patterns, KISS, YAGNI, and DRY enabled by default. These are recommendations
+for relevant work, not requirements to use a specific architecture or technology stack.
+
+Checked items enable a preference; unchecked items disable that preference without requiring
+the opposite. Approved project decisions and more specific rules take precedence. An enabled
+item does not require extra layers, interfaces, patterns, or structural rewrites. The checklist
+does not expand task scope or grant delivery permission.
+
+Assistants MUST preserve selections when merging or updating templates and MUST NOT change
+them unless instructed by the developer. Missing selections MUST NOT be silently added to an
+existing checklist; the default applies to a newly copied template. AGENTS.md owns these
+preferences; ARCHITECTURE.md owns adopted decisions and implemented structure. No additional
+context file is needed for the checklist.
+
 ## Frontmatter
 
 YAML frontmatter is optional. When used, `last_updated` SHOULD be an ISO 8601 timestamp

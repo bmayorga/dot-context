@@ -23,6 +23,15 @@ This repository uses ARCHITECTURE.md, CHANGES.md, SPECS.md, and SOW.md; it has n
 3. Inspect code, tests, and executable configuration before claiming implemented behavior.
 4. Resolve discrepancies using the authority rules below.
 
+## Design Preferences
+
+Read the Design Recommendations checklist in AGENTS.md when present. Checked items are
+enabled preferences for relevant work; unchecked items are disabled preferences. Preserve
+developer selections and change them only when instructed by the developer. Approved
+decisions and more specific project rules take precedence. Record adopted architecture
+in ARCHITECTURE.md when it exists; do not duplicate the checklist or infer implementation
+from its selections. No extra context file is needed for these preferences.
+
 ## Authority
 
 - Code, migrations, tests, settings, scripts, and pipeline configuration govern implemented behavior.

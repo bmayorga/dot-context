@@ -40,4 +40,4 @@ Publish a lightweight standard for AI-first project documentation and context co
 | Final review of responsibilities, history, migration, and document consistency | Complete: installation overwrite finding corrected and verified |
 | Stable 1.0.0 specification | Complete: final review and stable metadata |
 | Community feedback | Pending |
-| Tagged 1.0.0 publication | In progress: authorized by the developer |
+| Tagged 1.0.0 publication | Complete: v1.0.0 and stable GitHub release published on 2026-10-09 |

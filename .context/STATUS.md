@@ -7,6 +7,8 @@
 Stable 1.0.0 defines README.md and STATUS.md as required, visible opening instructions,
 scoped context reading, subject ownership and authority, material-change maintenance,
 optional planning/archive conventions, and curated milestone history with v0.1 migration.
+Published on 2026-10-09 as tag v1.0.0 at release commit 3aba1e0:
+[GitHub release](https://github.com/bmayorga/dot-context/releases/tag/v1.0.0).
 
 Templates cover required documents, recommended references, optional requirements/scope,
 planning documents, optional RBAC guidance, and AGENTS.md. Minimal and growing examples
@@ -34,13 +36,11 @@ existing files; existing content was preserved and no partial installation was p
 
 ## Active Work and Next Actions
 
-1. Publish the authorized stable release with tag v1.0.0 and GitHub release notes.
-2. Collect community feedback and evaluate future changes using semantic versioning.
+1. Collect community feedback and evaluate future changes using semantic versioning.
 
 ## Handoffs and Blockers
 
-No outstanding final-review findings. Stable metadata is finalized;
-tagging and GitHub publication are in progress.
+None. Final review is complete; the annotated tag and stable GitHub release are published.
 
 ## Known Risks
 

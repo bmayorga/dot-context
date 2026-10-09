@@ -10,6 +10,10 @@ For authorization changes, verify allowed and denied operations within and outsi
 
 ## Release and Recovery
 
+Follow the enabled Development and Release Workflow in README.md for branch routing,
+hotfix reconciliation, and cleanup. The settings are hypothetical; inspect actual repository
+configuration when adapting the example. This document owns delivery gates and procedures.
+
 Deliver the reviewed artifact only under the project's approved release procedure.
 Record the released revision and retain a known working revision for rollback.
 After release or rollback, verify runtime health using [DEVOPS.md](DEVOPS.md).

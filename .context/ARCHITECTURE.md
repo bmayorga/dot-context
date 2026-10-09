@@ -15,7 +15,9 @@
 
 SPEC.md defines the standard. The public README explains adoption. Templates provide
 copyable starting points. Minimal and growing examples demonstrate how the document set scales.
-AGENTS.md routes contributors through this repository's context protocol.
+AGENTS.md routes contributors through this repository's context protocol. Configuration and
+full maintenance rules live in .context/README.md so customized agent instructions require
+only a small integration block.
 
 ## Decisions
 
@@ -31,5 +33,6 @@ AGENTS.md routes contributors through this repository's context protocol.
 | Curated milestone history | Keep durable outcomes discoverable without session noise |
 | Preserve legacy entries on migration | Retain evidence without rewriting history |
 | Visible instructions after the title | State purpose, authority, and maintenance where readers start |
-| Configurable design checklist in AGENTS.md | Enable useful defaults while preserving developer choices and adopted architecture |
+| Configurable design checklist in .context/README.md | Enable useful defaults while preserving developer choices and adopted architecture |
+| Optional development/release workflow in .context/README.md | Keep branch selection separate from delivery configuration and execution authorization |
 | Uppercase names and optional YAML | Consistent naming without mandatory metadata |

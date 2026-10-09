@@ -13,7 +13,7 @@
 ## Decisions and Invariants
 
 <!-- Record adopted decisions, durable rationale, tradeoffs, and rules the implementation
-     must preserve. AGENTS.md owns configurable design recommendations. Do not treat a
+     must preserve. README.md owns configurable design recommendations. Do not treat a
      checked recommendation as evidence that an architecture has been implemented. -->
 
 ## Known Constraints

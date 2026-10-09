@@ -8,9 +8,10 @@ Publish a lightweight standard for AI-first project documentation and context co
 
 ## In Scope
 
-- Formal 1.0.0-rc.1 specification and v0.1 migration guidance.
-- Public adoption guide and root AGENTS.md integration.
-- Default-enabled design recommendations configurable in AGENTS.md without adding context files.
+- Formal stable 1.0.0 specification and v0.1 migration guidance.
+- Public adoption guide and minimal root AGENTS.md integration with configuration-preserving migration.
+- Default-enabled design recommendations configurable in .context/README.md without adding context files.
+- Optional development/release workflow configurable in .context/README.md, without changing this repository's branch policy.
 - Opening instructions in all maintained context documents.
 - Templates for discovery, status, specialized references, scope, requirements, and plans.
 - Self-contained document-creation protocol and optional TASK template.
@@ -32,8 +33,11 @@ Publish a lightweight standard for AI-first project documentation and context co
 | v0.1 initial proposal | Complete |
 | Specification, templates, integration, and minimal/growing examples | Complete |
 | 1.0.0-rc.1 version and release status alignment | Complete |
+| 1.0.0-rc.2 revision for configurable design recommendations | Complete |
+| 1.0.0-rc.3 revision for optional development/release workflow | Complete |
+| 1.0.0-rc.4 revision for self-contained configuration and minimal AGENTS routing | Complete |
 | Local documentation consistency checks | Complete: links, anchors, opening instructions, naming, and generic content |
-| Final review of responsibilities, history, migration, and document consistency | Pending |
-| Stable 1.0.0 release | Pending final review |
+| Final review of responsibilities, history, migration, and document consistency | Complete: installation overwrite finding corrected and verified |
+| Stable 1.0.0 specification | Complete: final review and stable metadata |
 | Community feedback | Pending |
-| Publication and promotion | Pending |
+| Tagged 1.0.0 publication | In progress: authorized by the developer |

@@ -20,10 +20,15 @@ Only README.md and STATUS.md are required by the standard. The other files are i
 to show useful ownership boundaries, not a checklist every project must adopt.
 The [minimal example](../minimal/README.md) demonstrates the starting point.
 
-AGENTS.md demonstrates a developer disabling the Design patterns preference while keeping
+.context/README.md demonstrates a developer disabling the Design patterns preference while keeping
 the other defaults enabled. This is an illustrative local choice; the template enables
 all six recommendations. ARCHITECTURE.md records adopted decisions rather than duplicating
 the checklist or claiming that an enabled recommendation has been implemented.
+
+The optional Development and Release Workflow is enabled with `dev` for integration and
+`main` for stable releases. Its complete rules are in .context/README.md. CI_CD.md owns validation
+and delivery procedures; this configuration does not claim real branches or pipelines exist
+in this documentation-only example.
 
 No executable application or pipeline is included. These examples illustrate the documentation
 protocol rather than prescribe commands, deployment providers, or production policies.

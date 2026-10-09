@@ -1,11 +1,11 @@
-# .context/ Standard — Specification 1.0.0-rc.1
+# .context/ Standard — Specification 1.0.0
 
 > **How to use this document:** This defines the proposed standard. Read it when adopting or changing the convention. Update requirements and migration guidance together; project-specific implementation details belong in the adopting project's documents.
 
 **Author:** [Byron Mayorga](https://www.linkedin.com/in/bmayorga/)\
-**Status:** Release candidate — Final review before 1.0.0\
+**Status:** Stable\
 **License:** MIT  
-**Date:** 2026-10-04
+**Date:** 2026-10-09
 
 ## Purpose
 
@@ -144,7 +144,11 @@ process; do not rewrite them as if locally owned.
 ## Task Protocol and AGENTS.md
 
 Projects SHOULD include a root AGENTS.md with the integration instructions in
-[the template](templates/AGENTS.md). Existing coding and delivery rules remain in AGENTS.md.
+[the template](templates/AGENTS.md). Its Project Context block SHOULD route readers to
+.context/README.md without copying the protocol or context configuration. Existing coding
+and delivery rules remain in AGENTS.md. Installation SHOULD verify that the routing target
+exists, explicitly read it, and review configuration with the developer; copying the folder
+alone does not guarantee automatic discovery.
 
 Before work: read AGENTS.md, then .context/README.md, then STATUS.md and relevant references
 or plans. Inspect implementation evidence before claiming implemented behavior.
@@ -156,7 +160,7 @@ after every edit or session. This protocol does not authorize commits, pushes, o
 
 ## Configurable Design Recommendations
 
-The AGENTS.md template includes a developer-configurable checklist with Clean Architecture,
+The .context/README.md template includes a developer-configurable checklist with Clean Architecture,
 SOLID, design patterns, KISS, YAGNI, and DRY enabled by default. These are recommendations
 for relevant work, not requirements to use a specific architecture or technology stack.
 
@@ -167,9 +171,45 @@ does not expand task scope or grant delivery permission.
 
 Assistants MUST preserve selections when merging or updating templates and MUST NOT change
 them unless instructed by the developer. Missing selections MUST NOT be silently added to an
-existing checklist; the default applies to a newly copied template. AGENTS.md owns these
-preferences; ARCHITECTURE.md owns adopted decisions and implemented structure. No additional
-context file is needed for the checklist.
+existing checklist; the default applies to a newly copied template. .context/README.md owns
+these preferences; ARCHITECTURE.md owns adopted decisions and implemented structure. No
+additional context file is needed for the checklist.
+
+## Optional Development and Release Workflow
+
+The .context/README.md template offers an enabled workflow checkbox with configurable development
+and stable branches, defaulting to `dev` and `main`. Adoption is optional; developers may
+disable it or configure an existing `master` stable branch. It is a lightweight convention
+for development and versioned releases, not a requirement to implement full Git Flow.
+
+When enabled, normal working branches originate from development and return after
+validation and review. Development SHOULD remain usable; incomplete work stays on working
+branches. Use descriptive `feat/`, `fix/`, `docs/`, `refactor/`, `test/`, or `chore/` names
+without assistant-specific prefixes. Completed branches MAY be deleted after confirming
+their changes were integrated, including through squash or rebase, unless instructed to retain
+them. Unmerged work MUST be preserved.
+
+Approved release state moves from development to stable and receives a version tag.
+Urgent published-version fixes use `hotfix/` from stable and MUST be incorporated into
+both stable and development. Reconcile stable-only release adjustments into development
+when needed. No separate release branch is required.
+
+.context/README.md owns the selected workflow and branch configuration; CI_CD.md, when present,
+owns executable gates, delivery procedures, and project-specific release behavior.
+Assistants MUST preserve developer configuration and MUST NOT change it unless instructed.
+Enabling the option does not grant blanket permission for commits, pushes, merges, branch
+deletion, tags, publication, or deployment, nor create permanent branches or protections.
+The standard's own repository may document this option without adopting it.
+
+## Updating Existing Installations
+
+Assistants MUST preserve project-owned configuration while updating the context protocol.
+An existing context checklist or branch workflow in AGENTS.md SHOULD be moved to
+.context/README.md with its exact selections, branch names, and local extensions. Verify
+preservation before removing the context-owned duplicate. Independently maintained project
+rules stay in AGENTS.md; unresolved conflicts must be reported to the developer.
+Validate the routing block and affected links after migration. Defaults MUST NOT reset
+local choices, and the protocol SHOULD have one active source of truth.
 
 ## Frontmatter
 
@@ -191,14 +231,13 @@ Visible ownership or lifecycle notes MAY be used without YAML.
 
 ## Versioning
 
-The standard uses semantic versioning. This revision is `1.0.0-rc.1`, the first release
-candidate for 1.0.0. It changes required files and the history convention relative to
-v0.1; adoption requires the migration steps above.
+The standard uses semantic versioning. This revision is `1.0.0`, the first stable release.
+It changes required files and the history convention relative to v0.1; adoption requires
+the migration steps above.
 
-Release 1.0.0 after final review confirms required files and document responsibilities,
-history and migration rules, and consistency across the specification, templates, examples,
-and AGENTS.md integration. No additional features are required for that review. Changes
-to the candidate may produce another release candidate before the stable release.
+Final review confirmed required files and document responsibilities, history and migration
+rules, and consistency across the specification, templates, examples, and AGENTS.md
+integration. The installation guide preserves existing configuration and project state.
 
 After 1.0.0, incompatible changes to required files or normative workflow rules increment
 the major version; backward-compatible additions increment the minor version; clarifications
@@ -206,6 +245,10 @@ and corrections that preserve requirements increment the patch version.
 
 | Version | Date | Description |
 |---|---|---|
+| 1.0.0 | 2026-10-09 | First stable release after final review; configuration-preserving installation and migration |
+| 1.0.0-rc.4 | 2026-10-09 | Context README owns configuration and full protocol; minimal AGENTS routing and verified installation/update migration |
+| 1.0.0-rc.3 | 2026-10-09 | Optional development/release workflow with configurable branches, conventional names, hotfix reconciliation, and integrated-branch cleanup |
+| 1.0.0-rc.2 | 2026-10-09 | Configurable design recommendations in AGENTS.md, enabled defaults, and preservation of developer selections |
 | 1.0.0-rc.1 | 2026-10-04 | First release candidate; complete context protocol and migration guidance ready for final review |
 | 0.2 draft | 2026-10-04 | Context entry point, opening instructions, scoped reading, authority, maintenance, planning, and migration |
 | 0.1 | 2026-02-19 | Initial proposal |

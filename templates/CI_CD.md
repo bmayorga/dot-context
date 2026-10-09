@@ -12,7 +12,9 @@
 
 ## Deployment and Recovery
 
-<!-- Describe actual promotion rules, deployment steps, and rollback procedures. -->
+<!-- Describe actual promotion rules, deployment steps, and rollback procedures.
+     Refer to the configured workflow and branch names in README.md rather than copying
+     its generic rules. Enabling a workflow does not configure an executable pipeline. -->
 
 ## Troubleshooting
 

@@ -2,6 +2,36 @@
 
 > **How this file works:** This owns durable milestones for the proposal. Read it for historical context. Prepend future dated milestones below these instructions and preserve existing entries. Current state belongs in STATUS.md. The legacy v0.1 session lines below retain their original content and order; the transition entry closes that format.
 
+## 2026-10-09 — Stable 1.0.0
+
+Finalized the first stable standard after review of document responsibilities, migration,
+configuration ownership, templates, and examples. Adoption includes self-contained context
+discovery, configurable design and branch-workflow recommendations, optional planning and
+specialized references, and installation guidance that preserves existing project content.
+Release-candidate and legacy history remain intact.
+
+## 2026-10-09 — Self-Contained Context Configuration
+
+Moved context design preferences and branch-workflow rules into each context README while
+preserving developer selections, configured branch names, and local project instructions.
+Simplified AGENTS integration to a routing block, added installation verification and
+update migration, and advanced the candidate to 1.0.0-rc.4. No context files or branches
+were added; this repository's optional workflow remains disabled.
+
+## 2026-10-09 — Optional Development and Release Workflow
+
+Added a configurable AGENTS workflow with conventional working-branch names, integration
+through development, version promotion to stable, urgent-fix reconciliation, and verified
+branch cleanup. Aligned adoption guidance, templates, and enabled/disabled examples and
+advanced the candidate to 1.0.0-rc.3. The proposal repository keeps this option disabled;
+adoption does not grant blanket execution permission or create new context files.
+
+## 2026-10-09 — Second 1.0.0 Release Candidate
+
+Advanced the standard to 1.0.0-rc.2 to distinguish the revision that adds configurable
+design recommendations in AGENTS.md. Aligned the specification, adoption guide, and
+current repository context while preserving the first candidate's historical record.
+
 ## 2026-10-04 — Configurable Design Recommendations
 
 Added a default-enabled design checklist to the AGENTS template and documented checkbox

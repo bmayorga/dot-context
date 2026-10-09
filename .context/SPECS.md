@@ -18,8 +18,11 @@ Propose an open, lightweight Markdown convention for project knowledge and AI se
 - Self-contained README rules for choosing, creating, registering, and retiring additional files.
 - Optional TASK-* plans for independently resumable execution units; routine steps stay in checklists.
 - Optional SPECS.md/SOW.md and optional YAML metadata.
-- A developer-configurable design checklist in AGENTS.md, enabled by default in the template.
+- A developer-configurable design checklist in .context/README.md, enabled by default in the template.
 - Preserve local selections and separate recommendations from implemented architecture.
+- Optional branch workflow in .context/README.md with configurable development/stable branches,
+  task-based naming, verified integration and cleanup, and urgent-fix reconciliation.
+- Minimal AGENTS routing with verified installation and update migration preserving local configuration.
 - Project-neutral templates and examples.
 - Minimal and growing examples demonstrate optional DEVOPS.md, CI_CD.md, and RBAC.md ownership.
 - MIT license.
@@ -33,11 +36,17 @@ Propose an open, lightweight Markdown convention for project knowledge and AI se
 - [x] README selection and lifecycle rules cover ROADMAP, EPIC, FEATURE, TASK, and specialized references.
 - [x] Migration guidance preserves v0.1 history and useful scope/requirements files.
 - [x] Maintained context documents start with visible instructions after their titles.
-- [x] Version and release status aligned as 1.0.0-rc.1.
+- [x] Version and release status aligned as stable 1.0.0.
 - [x] Template defaults, checkbox semantics, installation guidance, and configurable examples are aligned.
-- [ ] Final review confirms required files and document responsibilities.
-- [ ] Final review confirms history, migration, and consistency before 1.0.0.
-- [ ] Community feedback collected on the release candidate.
+- [x] Optional workflow examples and ownership rules are aligned without adopting it in this repository.
+- [x] Final review confirms required files and document responsibilities.
+- [x] Final review confirms history, migration, and consistency before 1.0.0.
+- [ ] Community feedback collected on the standard (ongoing follow-up, not a release gate).
+
+The 2026-10-09 final review is complete. Quick Start protects existing README and STATUS
+files and routes updates to merge guidance. Verification covered fresh and empty-context
+installations, either required file alone, and both existing files; existing configuration
+and state were preserved. Local documentation consistency checks passed.
 
 ## Exclusions
 

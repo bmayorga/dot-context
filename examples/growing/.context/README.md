@@ -14,14 +14,92 @@
 | [FEATURE-VALIDATION.md](FEATURE-VALIDATION.md) | Approved scope and checkpoints | Validation capability work | Verified progress or approved decisions |
 | [CHANGES.md](CHANGES.md) | Durable milestone history | Historical context matters | A lasting milestone completes |
 
-## Design Preferences
+## Configuration and Template Updates
 
-Read the Design Recommendations checklist in AGENTS.md when present. Checked items are
-enabled preferences for relevant work; unchecked items are disabled preferences. Preserve
-developer selections and change them only when instructed by the developer. Approved
-decisions and more specific project rules take precedence. Record adopted architecture
-in ARCHITECTURE.md when it exists; do not duplicate the checklist or infer implementation
-from its selections. No extra context file is needed for these preferences.
+This README owns the design and branch-workflow configuration below. AGENTS.md routes
+assistants here and retains project-specific rules. More specific project rules and
+developer instructions take precedence; report unresolved conflicts rather than changing
+settings or project policy silently.
+
+Preserve checkbox selections, branch names, and local configuration when updating the
+template. Only the developer may instruct changes to those settings. The defaults apply
+to a new installation and must not reset an existing project's choices.
+
+## Design Recommendations
+
+Checked items are enabled recommendations. Unchecked items are disabled preferences.
+Apply enabled recommendations when relevant to the task, respecting approved project
+decisions, established conventions, and more specific project rules.
+
+- [x] Clean Architecture: favor clear boundaries and keep business rules independent
+      of infrastructure details where practical.
+- [x] SOLID: favor cohesive responsibilities, focused contracts, and controlled
+      dependencies where applicable.
+- [ ] Design patterns: use established patterns when they solve an identified problem
+      and justify their added complexity.
+- [x] KISS: prefer the simplest design that satisfies current requirements.
+- [x] YAGNI: add abstractions and extension points for demonstrated needs.
+- [x] DRY: consolidate duplicated knowledge when it represents the same rule and
+      should evolve together.
+
+An enabled recommendation does not require a particular folder layout, extra layers,
+interfaces, or a pattern for every change. A disabled preference does not require its
+opposite and does not override approved architecture or other project rules.
+These preferences do not authorize architectural rewrites or scope expansion.
+
+Explain significant tradeoffs and record adopted architectural decisions in
+ARCHITECTURE.md when that document exists. The checklist expresses preferences;
+ARCHITECTURE.md records actual decisions and implemented structure.
+
+Only change checklist selections when instructed by the developer. Preserve existing
+selections when updating or merging the template.
+
+## Development and Release Workflow
+
+- [x] Development and Release Workflow: use a development integration branch,
+      short-lived working branches, and a stable release branch.
+
+Development branch: `dev`
+Stable branch: `main`
+
+The checked option enables the rules below. When unchecked, follow the project's existing
+workflow. The developer chooses the branch names; `master` may replace `main` as the stable
+branch. Confirm those names before adopting the workflow in an existing repository.
+Preserve this selection and configuration during template updates; change them only when
+instructed by the developer. Do not create permanent branches or change branch protections
+merely because this section was copied.
+
+### Normal Work
+
+1. Start a focused working branch from the configured development branch. Use descriptive
+   names such as `feat/<DESCRIPTION>`, `fix/<DESCRIPTION>`, `docs/<DESCRIPTION>`,
+   `refactor/<DESCRIPTION>`, `test/<DESCRIPTION>`, or `chore/<DESCRIPTION>`.
+   Use lowercase hyphenated descriptions; do not add assistant names or prefixes.
+2. Keep incomplete work on its working branch. Validate and review a coherent completed
+   change before integrating it into the development branch; use a PR/MR when project
+   rules require one. Follow the project's merge strategy and keep development usable.
+3. Once integration is confirmed, the working branch may be deleted unless the developer
+   says to retain it. Verify inclusion of its changes through merge history or the PR/MR
+   record, including squash or rebase merges. Never discard unmerged work or reuse a
+   completed branch for unrelated work.
+
+### Releases and Urgent Fixes
+
+- When a reviewed version is ready, integrate the development branch into the stable
+  branch, validate the result, and tag the approved version. A merge or tag does not
+  automatically authorize deployment or publication.
+- For an urgent correction to a published version, create `hotfix/<DESCRIPTION>` from
+  the stable branch. Validate and review it, integrate it into stable, and incorporate
+  the correction into development so it survives the next release.
+- Reconcile stable-only release changes back into development when needed. Retire a
+  completed hotfix branch after confirming integration into both branches.
+- No dedicated release branch is required. The developer may extend this workflow
+  when the project needs additional controls.
+
+Respect existing developer authorization and project rules for commits, pushes, merges,
+branch deletion, tags, and releases. Enabling this option defines the branch route and
+does not grant blanket permission to perform those operations.
+
 
 ## Authority
 

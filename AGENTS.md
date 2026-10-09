@@ -6,50 +6,12 @@ This repository proposes the `.context/` standard for AI-first project documenta
 
 ## Project Context
 
-Before every task:
+Before every task, read `.context/README.md` and follow its discovery,
+configuration, and maintenance protocol. Preserve existing project
+rules and developer-selected settings.
 
-1. Read `.context/README.md` and follow its discovery, authority, and maintenance protocol.
-2. Read `.context/STATUS.md` for current state and next actions.
-3. Read relevant references and plans. For standard changes, read `.context/SPECS.md`,
-   `.context/SOW.md`, and `SPEC.md`.
-4. Inspect actual files before claiming the specification, templates, or examples are aligned.
-
-After a coherent change:
-
-- Update affected context documents when their underlying facts materially change.
-- Replace stale status and reconcile active scope and requirements.
-- Prepend a milestone to `.context/CHANGES.md` for durable standard changes; preserve history.
-- Validate local Markdown links and references to renamed, archived, or removed documents.
-- Follow the user's delivery instructions; this protocol does not authorize commits or pushes.
-
-## Design Recommendations
-
-Checked items are enabled recommendations. Unchecked items are disabled preferences.
-Apply enabled recommendations when relevant to the task, respecting approved project
-decisions, established conventions, and more specific project rules.
-
-- [x] Clean Architecture: favor clear boundaries and keep business rules independent
-      of infrastructure details where practical.
-- [x] SOLID: favor cohesive responsibilities, focused contracts, and controlled
-      dependencies where applicable.
-- [x] Design patterns: use established patterns when they solve an identified problem
-      and justify their added complexity.
-- [x] KISS: prefer the simplest design that satisfies current requirements.
-- [x] YAGNI: add abstractions and extension points for demonstrated needs.
-- [x] DRY: consolidate duplicated knowledge when it represents the same rule and
-      should evolve together.
-
-An enabled recommendation does not require a particular folder layout, extra layers,
-interfaces, or a pattern for every change. A disabled preference does not require its
-opposite and does not override approved architecture or other project rules.
-These preferences do not authorize architectural rewrites or scope expansion.
-
-Explain significant tradeoffs and record adopted architectural decisions in
-.context/ARCHITECTURE.md when that document exists. The checklist expresses preferences;
-ARCHITECTURE.md records actual decisions and implemented structure.
-
-Only change checklist selections when instructed by the developer. Preserve existing
-selections when updating or merging the template.
+For standard changes, also read `.context/SPECS.md`, `.context/SOW.md`, and `SPEC.md`.
+Inspect actual files before claiming alignment. Follow the user's delivery instructions.
 
 ## Documentation Guidelines
 

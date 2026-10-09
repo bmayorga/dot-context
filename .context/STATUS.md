@@ -4,7 +4,7 @@
 
 ## Current State
 
-Release candidate 1.0.0-rc.1 defines README.md and STATUS.md as required, visible opening instructions,
+Stable 1.0.0 defines README.md and STATUS.md as required, visible opening instructions,
 scoped context reading, subject ownership and authority, material-change maintenance,
 optional planning/archive conventions, and curated milestone history with v0.1 migration.
 
@@ -15,25 +15,34 @@ example shows when to read DEVOPS.md, CI_CD.md, and RBAC.md and how their subjec
 Context READMEs explain choosing, adding, registering, maintaining, and retiring references
 and ROADMAP/EPIC/FEATURE/TASK plans. TASK files are optional; routine steps stay in checklists.
 Author attribution uses the LinkedIn profile consistently; organization branding has been removed.
-AGENTS.md now supports a default-enabled design checklist for Clean Architecture, SOLID,
+.context/README.md owns a default-enabled design checklist for Clean Architecture, SOLID,
 design patterns, KISS, YAGNI, and DRY. Developers can disable preferences; assistants preserve
 their selections. Examples demonstrate defaults and one disabled preference without adding files.
+The optional Development and Release Workflow defines configurable integration and stable
+branches, conventional work-branch names, hotfix reconciliation, and integrated-branch cleanup.
+The template enables it; the minimal example and this repository keep it disabled.
+AGENTS.md now contains a small routing block; installation verifies that it reaches the
+README protocol. Updates preserve local choices and migrate earlier context-owned blocks.
 
 Local checks passed for Markdown links and anchors, opening instructions, uppercase context
 filenames, generic example/template content, and diff whitespace.
+The final review on 2026-10-09 confirmed document responsibilities, history, migration,
+and consistency. Its installation overwrite finding is resolved: Quick Start checks both
+required files before copying, and existing installations follow merge guidance. Verification
+passed for a fresh project, an empty context directory, either required file alone, and both
+existing files; existing content was preserved and no partial installation was performed.
 
 ## Active Work and Next Actions
 
-1. Complete final review of required files and document responsibilities.
-2. Confirm history and migration rules and consistency across templates, examples, and AGENTS.md.
-3. Address review findings, then promote the candidate to 1.0.0 when the review passes.
-4. Resume publication and promotion when authorized.
+1. Publish the authorized stable release with tag v1.0.0 and GitHub release notes.
+2. Collect community feedback and evaluate future changes using semantic versioning.
 
 ## Handoffs and Blockers
 
-None.
+No outstanding final-review findings. Stable metadata is finalized;
+tagging and GitHub publication are in progress.
 
 ## Known Risks
 
-Existing adopters need explicit migration: 1.0.0-rc.1 adds a required entry point and changes the
+Existing adopters need explicit migration: 1.0.0 adds a required entry point and changes the
 history convention. Legacy history is preserved rather than rewritten.

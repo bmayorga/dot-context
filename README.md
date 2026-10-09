@@ -4,7 +4,7 @@
 
 **A lightweight, AI-first project context convention.**
 
-**Version:** 1.0.0-rc.1 — Release candidate for final review before 1.0.0.
+**Version:** 1.0.0 — Stable release.
 
 Proposed by [Byron Mayorga](https://www.linkedin.com/in/bmayorga/)
 
@@ -15,8 +15,8 @@ It describes current state, scope, design, and operational knowledge without req
 Current references represent the present; plans describe intended work; curated history
 records lasting milestones.
 
-AGENTS.md holds agent instructions. .context/README.md defines how to discover and maintain
-project knowledge. They work together.
+AGENTS.md holds project-specific agent instructions and a small context routing block.
+.context/README.md owns discovery, configuration, and maintenance. They work together.
 
 ## Structure
 
@@ -43,13 +43,20 @@ Optional ROADMAP-* and EPIC-* plans support broader work without requiring a pla
 
 ## Quick Start
 
-From a local copy of this repository, use its absolute path:
+For a new installation, run these commands in Bash from the adopting project's root.
+Replace `/path/to/dot-context` with the absolute path of your local copy of this repository.
+If either required context file already exists, follow
+[Updating Existing Installations](#updating-existing-installations) instead of replacing it.
 
 ```bash
 # Run from the root of the adopting project.
-mkdir -p .context
-cp /path/to/dot-context/templates/README.md .context/README.md
-cp /path/to/dot-context/templates/STATUS.md .context/STATUS.md
+if [ -e .context/README.md ] || [ -e .context/STATUS.md ]; then
+  echo "Existing context detected. Follow Updating Existing Installations."
+else
+  mkdir -p .context &&
+  cp /path/to/dot-context/templates/README.md .context/README.md &&
+  cp /path/to/dot-context/templates/STATUS.md .context/STATUS.md
+fi
 ```
 
 Fill in current state, remove optional index rows for documents you do not use, and copy
@@ -59,53 +66,77 @@ instructions; retain and adapt those instructions.
 
 ## Integration with AGENTS.md
 
-Place this block near the top of AGENTS.md, before project-specific coding rules:
+Add this small routing block near the top of an existing AGENTS.md. Preserve its current
+coding, delivery, and project-specific instructions.
 
 ```markdown
 ## Project Context
 
-Before every task:
-1. Read .context/README.md and follow its discovery, authority, and maintenance rules.
-2. Read .context/STATUS.md.
-3. Read only the references and active plans relevant to the task.
-4. Inspect implementation evidence before claiming implemented behavior.
-
-After a coherent change:
-- Update affected documents only when their underlying facts materially changed.
-- Replace stale current-state text and reconcile relevant active plans.
-- If CHANGES.md exists, prepend a durable milestone and preserve existing entries.
-- Validate links and repair references to renamed, archived, or removed documents.
-
-Report discrepancies between implementation and approved scope or business definitions.
-Follow existing project rules for commits, pushes, and deployment.
+Before every task, read `.context/README.md` and follow its discovery,
+configuration, and maintenance protocol. Preserve existing project
+rules and developer-selected settings.
 ```
 
-A complete [AGENTS.md template](templates/AGENTS.md) is also available. For a new AGENTS.md,
-copy that template and customize its project rules. When AGENTS.md already exists, merge
-the context block above and the design checklist without replacing existing rules
-or developer selections.
+For a new AGENTS.md, copy [the template](templates/AGENTS.md) and fill in its project rules.
+The context README owns the complete protocol and configuration; keep one active copy
+instead of duplicating those sections in AGENTS.md.
+
+### Installation Verification
+
+1. Inspect existing context first. Create only missing README and STATUS documents from
+   the templates, then initialize verified project state. Preserve existing content,
+   checkbox selections, branch names, and custom rules; merge protocol updates using
+   [Updating Existing Installations](#updating-existing-installations).
+2. Inspect any existing AGENTS.md and add or update only the Project Context routing block.
+3. Verify the root AGENTS.md points to the actual .context/README.md and that the file exists.
+   Have the assistant read it explicitly during setup; copying a directory alone does not
+   guarantee discovery.
+4. Review and show the developer the README's design selections, workflow toggle, and
+   development/stable branch names. Defaults apply to new configuration; retain existing choices.
+   Enabled workflow settings do not create permanent branches or grant delivery permission.
+5. Validate local links and remove optional index rows for references not installed.
 
 ### Configure Design Recommendations
 
-The template enables Clean Architecture, SOLID, design patterns, KISS, YAGNI, and DRY by
-default in its **Design Recommendations** checklist. Keep the checklist in AGENTS.md;
+Edit the [context README checklist](templates/README.md#design-recommendations).
+Clean Architecture, SOLID, design patterns, KISS, YAGNI, and DRY are enabled by default
+in a new installation. `[x]` enables a recommendation for relevant work; `[ ]` disables
+that preference without requiring its opposite.
+
+Developers choose settings. Assistants preserve selections during updates and change them
+only when instructed. More specific project rules and approved decisions take precedence.
+An enabled item does not require extra layers, interfaces, folder layouts, or patterns.
 ARCHITECTURE.md continues to own adopted decisions and implemented structure.
 
-- `[x]` enables a recommendation for relevant work.
-- `[ ]` disables the preference; it does not require doing the opposite.
-- Developers may disable individual items. Assistants preserve selections and change them
-  only when instructed by the developer, including during template updates.
-- Approved project decisions and more specific rules take precedence. Enabled items do
-  not require new layers, interfaces, folder layouts, or a pattern for every change.
+### Configure the Optional Branch Workflow
 
-For example, a developer can change the Design patterns checkbox from `[x]` to `[ ]`.
-The assistant then follows existing project decisions without treating that recommendation
-as an enabled preference. All defaults are visible in the
-[copyable checklist](templates/AGENTS.md#design-recommendations).
+The [context README workflow](templates/README.md#development-and-release-workflow) includes
+an enabled checkbox for new installations. Keep `[x]` to adopt it or use `[ ]` to follow
+the project's existing process. Configure development (default `dev`) and stable (default
+`main`, or `master` where appropriate) in that same README.
 
-When merging into an existing AGENTS.md, copy the entire Design Recommendations section,
-including its interpretation rules. Review conflicts with local rules and preserve any
-existing checklist choices; do not reset them to the template defaults.
+Normal work follows `dev -> feat/*, fix/*, docs/*, etc. -> dev -> main/master -> version tag`.
+The README contains the full validation, review, hotfix, branch-cleanup, and authorization
+rules. CI_CD.md, when present, owns actual delivery gates and procedures and references the
+configured workflow instead of duplicating it.
+
+The minimal example and this repository keep the optional workflow disabled; the growing
+example enables it. Updating this standard does not adopt a branch workflow locally.
+
+### Updating Existing Installations
+
+Preserve the project's README checkbox selections, branch names, and custom configuration
+while incorporating protocol improvements. The small AGENTS.md routing block normally
+needs no change when the context protocol evolves.
+
+For installations that put the context design or workflow blocks in AGENTS.md:
+
+1. Move those context-owned blocks into .context/README.md with their exact current settings.
+2. Verify all selections, branch names, and local extensions were retained; resolve conflicts
+   explicitly with the developer instead of choosing silently.
+3. Keep independently maintained coding and delivery rules in AGENTS.md. Remove only the
+   migrated context-owned copies and install the small routing block.
+4. Update references in ARCHITECTURE.md, CI_CD.md, and other affected documents, then validate links.
 
 ## Document Ownership
 
@@ -174,16 +205,19 @@ explaining its purpose, when to read it, and how to maintain it. YAML metadata i
 
 ## Migrating from v0.1
 
-1.0.0-rc.1 adds README.md, opening instructions, scoped reading, and curated history.
+1.0.0 adds a self-contained README entry point, opening instructions, scoped reading,
+curated history, and configurable design and branch-workflow options in .context/README.md.
+AGENTS.md uses a small routing block while retaining project-specific rules.
 Keep existing SPECS.md and SOW.md when useful. Preserve legacy CHANGES.md entries and their
 order; prepend future dated milestones above them and document the transition.
 See [the migration checklist](SPEC.md#migration-from-v01).
 
-## Release Readiness
+## Stable Release
 
-The first release candidate has the complete proposed workflow. Before 1.0.0, confirm
-required files and responsibilities, history and migration rules, and consistency across
-the specification, templates, examples, and AGENTS.md integration.
+1.0.0 is the first stable version of the standard. Final review confirmed required files,
+document responsibilities, history and migration rules, and consistency across the
+specification, templates, examples, and AGENTS.md integration. Installation guidance
+protects existing configuration and project state.
 
 ## Examples and Contributions
 

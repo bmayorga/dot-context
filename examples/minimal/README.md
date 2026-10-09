@@ -12,5 +12,7 @@ No specialized reference or plan is needed while the current facts fit in a shor
 Add one only when its subject needs a separate owner. The
 [growing example](../growing/README.md) shows that next step.
 
-AGENTS.md includes all six design recommendations enabled as template defaults; the
+.context/README.md includes all six design recommendations enabled as template defaults; the
 developer may disable individual preferences without adding a context document.
+The optional Development and Release Workflow is disabled here; the template offers it
+enabled, but the developer chooses whether to adopt it and confirms branch configuration.

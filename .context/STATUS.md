@@ -9,6 +9,11 @@ scoped context reading, subject ownership and authority, material-change mainten
 optional planning/archive conventions, and curated milestone history with v0.1 migration.
 Published on 2026-10-09 as tag v1.0.0 at release commit 3aba1e0:
 [GitHub release](https://github.com/bmayorga/dot-context/releases/tag/v1.0.0).
+The working adoption guide now presents release ZIP and assistant-assisted installation
+as the primary routes, with local template copying as an alternative. Its opening emphasizes
+continuity across AI sessions, a two-document starting point, and direct installation/example
+links. These documentation clarifications are not yet published in a new release and do not
+change the standard's rules.
 
 Templates cover required documents, recommended references, optional requirements/scope,
 planning documents, optional RBAC guidance, and AGENTS.md. Minimal and growing examples

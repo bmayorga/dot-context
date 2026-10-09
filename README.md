@@ -2,7 +2,7 @@
 
 > **How to use this repository:** Start here for adoption, read [SPEC.md](SPEC.md) for the rules, and copy only the templates you need. Contributors must read [AGENTS.md](AGENTS.md) before editing. Keep the specification, templates, examples, and repository context consistent.
 
-**A lightweight, AI-first project context convention.**
+**Keep your project context across AI sessions.**
 
 **Version:** 1.0.0 — Stable release.
 
@@ -10,10 +10,14 @@ Proposed by [Byron Mayorga](https://www.linkedin.com/in/bmayorga/)
 
 ## What is .context/?
 
-A small directory of plain Markdown that preserves project knowledge between AI sessions.
-It describes current state, scope, design, and operational knowledge without requiring tooling.
-Current references represent the present; plans describe intended work; curated history
-records lasting milestones.
+.context gives developers and AI assistants a shared place for project decisions,
+current work, and next steps, so the next session can pick up where the last one left off.
+
+Start with two Markdown files. Add architecture, operations, permissions, and plans as
+your project needs them. Keep everything versioned in your repository, with configurable
+recommendations and no required tooling.
+
+**[Get started](#quick-start) · [See examples](#examples-and-contributions)**
 
 AGENTS.md holds project-specific agent instructions and a small context routing block.
 .context/README.md owns discovery, configuration, and maintenance. They work together.
@@ -43,8 +47,59 @@ Optional ROADMAP-* and EPIC-* plans support broader work without requiring a pla
 
 ## Quick Start
 
-For a new installation, run these commands in Bash from the adopting project's root.
-Replace `/path/to/dot-context` with the absolute path of your local copy of this repository.
+Install .context by incorporating selected templates into your project's repository.
+Use either the manual steps or the assistant prompt below. Templates are the installation
+source; examples show how completed documents can look and are reading references.
+
+### Install from a Release ZIP
+
+1. Open the [1.0.0 release](https://github.com/bmayorga/dot-context/releases/tag/v1.0.0),
+   download **Source code (zip)**, and extract it outside your project's repository.
+2. Inspect any existing `.context/` and `AGENTS.md`. Create `.context/` if absent, then
+   copy `templates/README.md` and `templates/STATUS.md` into it only when those files
+   are missing. Merge updates into existing documents using
+   [Updating Existing Installations](#updating-existing-installations).
+3. For a new AGENTS.md, copy `templates/AGENTS.md` to the project root and fill in its
+   project rules. For an existing AGENTS.md, merge only the
+   [Project Context routing block](#integration-with-agentsmd), preserving current rules.
+4. Fill STATUS.md with verified project state, remove absent optional documents from
+   the context README index, and review design preferences and branch-workflow settings.
+   Add other templates only when the project needs their subjects and register them in
+   `.context/README.md`.
+5. Complete [Installation Verification](#installation-verification).
+
+Copy the selected template files into the project; keep the extracted standard, its own
+`.context/`, and its examples outside the project's installed context.
+
+### Install with an AI Assistant
+
+Give an assistant with repository and download access this prompt from your project's root:
+
+```text
+Install .context standard version 1.0.0 in this repository using the release at
+https://github.com/bmayorga/dot-context/releases/tag/v1.0.0.
+Download and extract that release outside this repository and use its templates.
+Inspect existing .context files and AGENTS.md before editing. Create only missing
+required documents, merge protocol updates, and preserve current state, custom
+rules, checkbox selections, and branch names. Integrate the small AGENTS.md
+routing block without replacing project-specific instructions.
+Initialize STATUS.md from verified project facts and remove absent optional
+documents from the context README index. Show me the design recommendations,
+workflow toggle, and branch names so I can choose the configuration; preserve
+existing choices. Add optional documents only when the project needs them and
+register them in .context/README.md.
+Explicitly read the installed context README, verify AGENTS.md routes to it,
+validate local links, and summarize the installed files and configuration.
+```
+
+If the assistant cannot download the release, provide its extracted templates and use
+the same integration procedure.
+
+### Copy from Local Templates
+
+If you already have an extracted release or a local copy of this repository, run these
+commands in Bash from the adopting project's root. Replace `/path/to/dot-context` with
+the absolute path of that local copy.
 If either required context file already exists, follow
 [Updating Existing Installations](#updating-existing-installations) instead of replacing it.
 

@@ -10,6 +10,5 @@ rules and developer-selected settings.
 
 ## Project Rules
 
-This is a hypothetical documentation example. Keep its documents and links coherent.
-Use actual implementation evidence when adapting it to a project; these files describe
-an illustrative workflow and do not supply application code.
+<!-- Add actual coding conventions, runnable validation commands, and delivery rules.
+     Do not treat this template as permission to commit, push, or deploy. -->

@@ -14,9 +14,8 @@ The next action is to identify the required field and its existing validation pa
 
 ## Relevant References
 
-Use [ARCHITECTURE.md](ARCHITECTURE.md) for validation boundaries,
-[DEVOPS.md](DEVOPS.md) for runtime work, [CI_CD.md](CI_CD.md) for delivery gates, and
-[RBAC.md](RBAC.md) if the change affects permissions or resource scope.
+Use [ARCHITECTURE.md](ARCHITECTURE.md) for the existing submission boundaries.
+The feature owns its checkpoints; this status owns the next action.
 
 ## Handoffs and Blockers
 

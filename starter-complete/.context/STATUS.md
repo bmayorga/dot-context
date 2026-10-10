@@ -12,8 +12,8 @@
 
 ## Handoffs and Blockers
 
-None.
+Not assessed. Replace with verified project state during setup.
 
 ## Known Risks
 
-None.
+Not assessed. Replace with verified project state during setup.

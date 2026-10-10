@@ -1,18 +1,23 @@
 # Context System
 
-> **How this file works:** Read this before each task, then STATUS.md and relevant documents. This owns discovery, authority, and maintenance. Update it when responsibilities or reading rules change; details belong in the references and plans below.
+> **How this file works:** This is the installed project's context entry point. Read it before each task, then read STATUS.md and relevant documents. Maintain the index and protocol when responsibilities change; preserve developer configuration. Project facts belong in their owning documents.
 
 ## Document Responsibilities
 
-| Document | Owns | Read when | Update when |
+This Light starter includes only README.md and STATUS.md. Add documents when they become useful,
+following the creation protocol below; register only files actually present.
+
+| Document | Responsibility | Read when | Update when |
 |---|---|---|---|
-| [STATUS.md](STATUS.md) | Current state, priorities, blockers, risks | Every task | Present state changes |
-| [ARCHITECTURE.md](ARCHITECTURE.md) | Structure and component boundaries | Components or data flow change | Implemented design changes |
-| [DEVOPS.md](DEVOPS.md) | Setup, runtime configuration, recovery | Runtime work | Operational configuration changes |
-| [CI_CD.md](CI_CD.md) | Validation gates, delivery, rollback | Build or delivery work | Delivery configuration changes |
-| [RBAC.md](RBAC.md) | Roles, permissions, resource scope | Access rules or checks change | Policy or enforcement materially changes |
-| [FEATURE-VALIDATION.md](FEATURE-VALIDATION.md) | Approved scope and checkpoints | Validation capability work | Verified progress or approved decisions |
-| [CHANGES.md](CHANGES.md) | Durable milestone history | Historical context matters | A lasting milestone completes |
+| README.md | Discovery, authority, and maintenance protocol | Every task | The context system changes |
+| STATUS.md | Present state, active work, handoffs, blockers, risks | Every task | Present state changes |
+
+## Start of Task
+
+1. Read AGENTS.md, this document, and STATUS.md.
+2. Select relevant references and active plans; do not read every file automatically.
+3. Inspect code, tests, and executable configuration before claiming implemented behavior.
+4. Resolve discrepancies using the authority rules below.
 
 ## Configuration and Template Updates
 
@@ -35,7 +40,7 @@ decisions, established conventions, and more specific project rules.
       of infrastructure details where practical.
 - [x] SOLID: favor cohesive responsibilities, focused contracts, and controlled
       dependencies where applicable.
-- [ ] Design patterns: use established patterns when they solve an identified problem
+- [x] Design patterns: use established patterns when they solve an identified problem
       and justify their added complexity.
 - [x] KISS: prefer the simplest design that satisfies current requirements.
 - [x] YAGNI: add abstractions and extension points for demonstrated needs.
@@ -100,19 +105,38 @@ Respect existing developer authorization and project rules for commits, pushes, 
 branch deletion, tags, and releases. Enabling this option defines the branch route and
 does not grant blanket permission to perform those operations.
 
-
 ## Authority
 
-Implementation evidence establishes actual behavior; approved plans and policies establish
-intended scope. Specialized references own their subjects. STATUS.md summarizes and routes.
-Report conflicts between approved access rules and enforcement instead of silently rewriting
-either. Historical records and inactive plans do not govern current work.
+- Code, migrations, tests, settings, scripts, and pipeline configuration govern implemented behavior.
+- Specialized references own their subjects; STATUS.md summarizes and links.
+- Approved requirements and plans govern intended scope, not implemented behavior.
+- Historical entries and archived plans explain the past and do not govern current work.
+- Approved business definitions govern conceptual meaning. Report conflicts with implementation
+  to the responsible owner rather than silently rewriting either source.
 
 ## Choosing and Adding Documents
 
 The assistant may add context documents when needed for already authorized work, following
 AGENTS.md and project scope rules. Creating a document does not approve new scope, business
 rules, or delivery actions.
+
+### Optional Reference Subjects
+
+These are useful document names, not a list of files installed in this project:
+
+| Subject | Suggested owner |
+|---|---|
+| Implemented design and boundaries | ARCHITECTURE.md |
+| Setup and runtime operations | DEVOPS.md |
+| Validation, pipelines, and delivery | CI_CD.md |
+| Roles, permissions, and resource scope | RBAC.md |
+| Approved requirements and acceptance | SPECS.md |
+| Approved scope and deliverables | SOW.md |
+| Durable history | CHANGES.md: dated YYYY-MM-DD milestones, newest first; preserve earlier entries |
+
+Add only useful owners and register actual files in the index. An approved requirement
+or access policy does not prove implementation. Other subjects may use a new uppercase
+descriptive filename. Keep references separate from intended work and current status.
 
 ### Choose the Smallest Useful Owner
 
@@ -137,8 +161,9 @@ is required. Do not create a full hierarchy automatically.
 2. Choose a durable reference or the smallest useful planning type from the table.
    Use an uppercase descriptive filename with a lowercase .md extension.
 3. Immediately after the title, add visible instructions stating purpose, when to read,
-   maintenance, authority, and lifecycle. Identify ownership, including synchronization
-   rules for externally maintained material.
+   maintenance, authority, and lifecycle. Identify ownership and synchronization rules for
+   externally maintained material. Use the opening-instruction pattern below even when
+   creating a document without a starter file.
 4. For a plan, record its state, objective, accepted scope and exclusions, checkpoints,
    decisions or dependencies, validation, and completion criteria. Label unresolved scope
    as proposed; do not invent approval. For a reference, document current knowledge and
@@ -147,6 +172,24 @@ is required. Do not create a full hierarchy automatically.
    maintenance rule. Link active work from STATUS.md and link any parent or related plan.
    Keep detail in its owning document instead of copying it across files.
 6. Validate links and reconcile state whenever the document is renamed or retired.
+
+### Opening Instructions for Every New Document
+
+Use this pattern immediately after the title and replace every placeholder with facts:
+
+```markdown
+# DOCUMENT TITLE
+
+> **How this file works:** This document owns [subject].
+> Read it when [trigger]. Update it when [facts change].
+> [Authoritative sources] take precedence; related details belong in [other documents].
+```
+
+For a plan, also state its lifecycle and when to archive or remove it. Assistants must
+include these instructions in every new document. If an existing document lacks them,
+add an accurate header within the authorized work, or report unclear ownership.
+Follow declared synchronization rules before editing externally maintained material.
+Register the document in this README with its reading and maintenance triggers.
 
 ### Planning Lifecycle
 
@@ -163,8 +206,13 @@ govern current work.
 Additional documents do not become required core files. Do not add a document merely
 because a template exists.
 
-## Maintenance
+## End of Task
 
-Update only materially changed facts, reconcile current status and active plans, and prepend
-durable milestones. Archive inactive plans if useful or remove them; repair active links
-and this index in the same change. Validate links and follow AGENTS.md for delivery rules.
+1. Review the diff and identify documented facts that materially changed.
+2. Update only affected documents, following their opening instructions.
+3. Replace stale current-state text; reconcile active plans and STATUS.md.
+4. Prepend a CHANGES.md milestone only for lasting product or architectural work.
+5. Validate local links and references to renamed, archived, or removed documents.
+6. Follow AGENTS.md and the project's delivery policy for commits, pushes, and deployment.
+
+If documented facts did not materially change, documentation needs no update.

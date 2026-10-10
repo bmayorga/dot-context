@@ -1,6 +1,17 @@
-# Changes
+# Changelog
 
-> **How this file works:** This owns durable milestones for the proposal. Read it for historical context. Prepend future dated milestones below these instructions and preserve existing entries. Current state belongs in STATUS.md. The legacy v0.1 session lines below retain their original content and order; the transition entry closes that format.
+> **How to use this file:** Read this for durable product milestones and past releases. Prepend new dated milestones below these instructions and preserve earlier entries. Current product rules and distribution status belong in README.md. The historical entries below retain their original context and file names, including the legacy v0.1 session format.
+
+## Unreleased
+
+### 2026-10-09 — Project-Shaped Starter Packages
+
+Separated the distribution repository from installed project context. Added Light and Complete
+starters with AGENTS.md beside .context, matching indexes, preserved configurable defaults,
+and a self-contained header pattern for new documents. Consolidated standard rules into the
+product README, moved repository maintenance rules into AGENTS and CONTRIBUTING, and preserved
+the former internal context history here. Replaced overlapping examples with one worked
+workflow and prepared starter-only ZIPs. The published 1.0.0 tag remains unchanged.
 
 ## 2026-10-09 — Stable 1.0.0
 

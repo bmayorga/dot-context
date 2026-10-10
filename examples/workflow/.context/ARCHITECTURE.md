@@ -1,6 +1,6 @@
 # Architecture
 
-> **How this file works:** This owns the hypothetical project's implemented structure and boundaries. Read it when validation or component responsibilities change. Update after material design changes and verify claims against implementation evidence when adapting the example. DEVOPS.md owns runtime procedures, CI_CD.md owns delivery, RBAC.md owns access details, and the feature plan owns intended changes.
+> **How this file works:** This owns the hypothetical project's implemented structure and boundaries. Read it when validation or component responsibilities change. Update after material design changes and verify claims against implementation evidence when adapting the example. The feature plan owns intended changes and STATUS.md owns immediate priorities.
 
 ## Structure and Boundaries
 
@@ -11,7 +11,7 @@ submitted data; persistence records only accepted input.
 ## Invariants
 
 Authorization and input validation are distinct checks. Changing required-field handling
-must preserve the existing resource access boundary described in [RBAC.md](RBAC.md).
+must preserve the existing resource access boundary; it does not change authorization policy.
 
 ## Planned Work
 
